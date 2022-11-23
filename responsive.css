@@ -1,0 +1,88 @@
+* body {
+    margin-bottom: 0;
+}
+
+.container {
+    display: grid;
+    height: 80vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 40px 1fr;
+    grid-template-areas:
+    "main main main"
+    "nav nav nav"
+    "content1 content2 content3";
+}
+main {
+    background: rgb(6, 6, 6);
+    grid-area: main;
+    text-align: center;
+    padding: 10px;
+    color: goldenrod;
+}
+nav {
+    grid-area: nav;
+}
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+      
+      li {
+        float: left;
+      }
+      
+      li a {
+        display: flex;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      li a:hover {
+        background-color: #111;
+      }
+#content1{
+    background-color: rgb(5, 32, 237);
+    grid-area: content1;
+    padding: 30px;
+    font-size: 18px;
+    color: rgb(247, 238, 238);
+    border: solid;
+    border-color: rgb(239, 16, 16);
+}
+h2{
+    text-align: center;
+    color: rgb(238, 247, 251);
+}
+#content2 {
+    background-color: #450994;
+    grid-area: content2;
+    padding: 30px;
+    font-size: 18px;
+    color: white;
+    border: solid;
+    border-color: rgb(239, 16, 16);
+}
+#content3 {
+    background-color: rgb(142, 103, 6);
+    grid-area: content3;
+    padding: 30px;
+    color: white;
+    border: solid;
+    border-color: rgb(239, 16, 16);
+}
+@media only screen and (max-width: 550px) {
+    .container {
+        grid-template-columns: 2fr;
+        grid-template-rows: 110px 40px 1fr;
+        grid-template-areas:
+        "main"
+        "nav"
+        "content1"
+        "content2"
+        "content3"
+    }
+}
